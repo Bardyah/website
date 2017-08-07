@@ -1,0 +1,55 @@
+body{
+
+    background-color: #e8d9be;
+    text-align: center;
+}
+
+.logo{
+    width: 30%;
+}
+
+.header{
+    padding: 20px;
+    background-color: #ece0cb;
+    border-radius: 10px;
+}
+
+.content{
+    
+    color: #362400;
+    font-size: 18px;
+    background-color: #ece0cb;
+    border-radius: 10px;
+    text-align: center;
+    padding: 80px;
+    
+}
+
+button,input[type=submit]{
+    background-color: #d2b47e;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px #362400;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .logo{
+    width: 30%;
+}
+    .header{
+    padding: 10px;
+}
+
+.content{
+    
+    font-size: 12px;
+    
+}
+button,input[type=submit]{
+    padding: 5px;
+    font-size: 10px;    
+}
+    
+}
