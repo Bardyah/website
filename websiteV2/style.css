@@ -1,0 +1,113 @@
+      body {
+          direction: rtl;
+          background-color: #fefaef;
+      }
+      
+      .navbar {
+            margin-bottom: 0;
+            background-color: #543e12;
+            z-index: 9999;
+            border: 0;
+            font-size: 16px !important;
+            font-family: 'Changa';
+            line-height: 1.42857143 !important;
+            border-radius: 0;
+            }
+      
+      .navbar li a, .navbar .navbar-brand {
+            color: #fefaef !important;
+        }
+      
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #543e12 !important;
+            background-color: #f7f0db !important;
+        }
+      
+      .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fefaef !important;
+        }
+      
+      .logo {
+          padding: 100px 0px 0px 0px;
+      }
+      
+      .header p {
+          font-size: 45px;
+      }
+      .jumbotron {
+          background-color: #fefaef;
+          color: #362400;
+          font-family: 'Harmattan';
+          padding: 0px 25px;
+      }
+      
+      
+      .bg-darkbrown {
+        padding: 15px 50px;
+          background-color: #1e1400;
+          color: #fefaef;
+          font-family: 'Changa';
+      }
+      
+      .bg-lightbrown {
+           padding: 40px 50px;
+          background-color: #e7c17a;
+          color: #1e1400;
+          font-family: 'Changa';
+      }
+      
+      .features {
+          padding: 40px 50px;
+      }
+      
+      .about {
+          color: #1e1400;
+      }
+      
+      .demo {
+          padding: 10px 0px;
+      }
+      
+      
+      .video {
+          padding: 0px 0px 30px 0px;
+      }
+      
+      .coming-soon {
+          padding-top: 100px;
+          padding-bottom: 100px;
+      }
+      
+      .contact {
+          padding-top: 10px;
+      }
+      
+      .contact-us {
+          padding: 15px 0px;
+      }
+      
+      .icon {
+          font-size: 150px;
+          padding: 0px 50px;
+      }
+      
+      footer {
+        background-color: #1e1400;
+          color: #fefaef;
+          font-family: 'Harmattan';
+          font-size: 15px;
+      }
+      
+      footer .glyphicon {
+              padding: 10px;
+            font-size: 20px;
+            color: #fefaef;
+        }
+      
+      @media screen and (max-width: 768px) {
+        .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+            }
+        }
