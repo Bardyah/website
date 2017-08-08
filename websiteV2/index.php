@@ -36,7 +36,7 @@
 </nav>
 
     <div class="jumbotron text-center header">
-          <a href="index.html">
+          <a href="#myPage">
            <img class="logo img-responsive center-block" src="Bardyah_logo/logo_web.png" alt="logo">
              </a> 
         <p style="padding: 35px 0px;">لا تُرسل رسالة.. ابعث بَردِيّة!</p> 
