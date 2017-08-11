@@ -1,8 +1,13 @@
 <?php  //Start the Session
 session_start();
-require ('connect.php');
+//require ('connect.php');
+ //connect to database
+$ip_addr = gethostbyname('apsouth1-mysql-instance2.cpip3m9hs2h0.ap-south-1.rds.amazonaws.com'); 
+$username = "adminer";
+$password = "adminer123";
+$dbname = "bardyahdb";
+$conn = new mysqli($ip_addr, $username, $password, $dbname);
 
-//3.2 When the user visits the page first time, simple login form will be displayed.
 ?>
 
 <!DOCTYPE html>
@@ -147,7 +152,7 @@ $user_pwd = $_POST['user_pwd'];
 //3.1.2 Checking the values are existing in the database or not
 $query = "SELECT * FROM `users` WHERE user_email='$user_email' and user_pwd='$user_pwd'";
  
-$result = mysqli_query($connection,$query) or die(mysqli_error($connection));
+$result = mysqli_query($conn,$query) or die(mysqli_error($conn));
 if(mysqli_num_rows($result)>0){
   $_SESSION['user_email']=$user_email;
 
