@@ -78,13 +78,7 @@ $conn = new mysqli($ip_addr, $username, $password, $dbname);
 }
 
 .login input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
+
   font-family: inherit;
   font-size: 0.95em;
 }
@@ -116,7 +110,17 @@ $conn = new mysqli($ip_addr, $username, $password, $dbname);
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
   border-color: #fefaef;
-}</style>
+}
+ .fbbutton {    
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;} </style>
 
   
 </head>
@@ -137,7 +141,7 @@ $conn = new mysqli($ip_addr, $username, $password, $dbname);
   <h2 class="login-header">تسجيل الدخول</h2>
 
   <form class="login-container" action="LOGIN1.php" method="post">
-    <p><input class="form-control" type="text" tabindex="1"  id="email" placeholder="البريد الإلكتروني" type="email" name="user_email" class="inputtext radius1" value="" required></p>
+    <p><input class="form-control" type="email" tabindex="1"  id="email" placeholder="البريد الإلكتروني" type="email" name="user_email" class="inputtext radius1" value="" required></p>
     <p><input class="form-control" type="password" tabindex="2" id="pass" placeholder="كلمة المرور" name="user_pwd" class="inputtext radius1" required></p>
     <p><td ><input   type="submit" class="fbbutton" name="login" value="تسجيل الدخول" /></td>
 </p>

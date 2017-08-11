@@ -39,17 +39,22 @@ $dbname = "bardyahdb";
   <title>التسجيل </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
+ <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="scroll.js"></script>
-  <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Changa:600|Harmattan" rel="stylesheet">
   
-  
-  
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <style>
+  
+  
+<style>
 /* 'Open Sans' font from Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -101,13 +106,7 @@ $dbname = "bardyahdb";
 }
 
 .login input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
+
   font-family: inherit;
   font-size: 0.95em;
 }
@@ -139,6 +138,18 @@ $dbname = "bardyahdb";
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
   border-color: #fefaef;
+}
+ .fbbutton {    
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;}  
+
 }</style>
 
 </head>
@@ -158,7 +169,7 @@ $dbname = "bardyahdb";
 
 <form method="POST" action="regester.php" class="login-container">
  <td class="form-control" dir="rtl">الاسم</td>
-<td> <input type="text" name="user_first" class="form-control" required></td>
+<td> <input type="email" name="user_first" class="form-control" required></td>
 <tr dir="rtl"> <td>البريد الالكتروني</td>
 <td><input type="text" name="user_email" class="form-control" required></td></tr>
 <tr dir="rtl"> <td>كلمة السر</td><td> 
