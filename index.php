@@ -135,15 +135,27 @@ echo "<li><a href='$linka'>التسجيل</a></li>";
            <div class="col-sm-8">
             <h2>بَردِيّة تحت التجهيز الآن!</h2>
             <p>سجل بريدك الإلكتروني لنخبرك حين الإطلاق</p>
-            <form class="form-inline">
-            <div class="input-group">
-              <input type="email" class="form-control" size="40" placeholder="البريد الإلكتروني" required>
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-warning">اشترك</button>
-                <button type="button" class="btn btn-danger">إلغاء الاشتراك</button>
-                </div>
-            </div>
-            </form>
+            <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+<form action="//144.us16.list-manage.com/subscribe/post?u=9d23e1d0bd44c09db74477a8a&amp;id=620bea3e5e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+<div class="mc-field-group">
+	<label for="mce-EMAIL" style="text-align:right;">بريدك الالكتروني </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color:black;">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9d23e1d0bd44c09db74477a8a_620bea3e5e" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
            </div>
            <div class="col-sm-4">
               <span class="glyphicon glyphicon-envelope icon"></span>
