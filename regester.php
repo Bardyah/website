@@ -19,7 +19,7 @@ $dbname = "bardyahdb";
     {
      $sql="INSERT INTO users (user_first,user_email,user_pwd)VALUES('$user_first','$user_email','$user_pwd')";
       mysqli_query($conn,$sql);
-     $_SESSION['user_email']=$user_email;
+     $_SESSION['user_first']=$user_first;
       header("location:index.php");
     }
     else

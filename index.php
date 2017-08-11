@@ -40,16 +40,16 @@ require ('connect.php');
         <ul class="nav navbar-nav navbar-left ">
             
 <?php
-If(isset($_SESSION['user_email'])) {
-$name =  $_SESSION['user_email']  ;
-echo "<li class='navbar-brand'>  $name مرحبا </li>" ;
+If(isset($_SESSION['user_first'])) {
+$name =  $_SESSION['user_first']  ;
+echo "<li class='navbar-brand'> مرحبا $name </li>" ;
     
- $links = "control.php"; // Link goes here!
+ $controlPanelLink = "control.php"; // Link goes here!
 
      
- $link = "logout.php"; // Link goes here!
-echo "<li><a href='$link'>  تسجيل الخروج</a></li>";   
- echo "<li><a href='$links'>  لوحة التحكم</a></li>";
+ $logOutLink = "logout.php"; // Link goes here!
+echo "<li><a href='$logOutLink'>  تسجيل الخروج</a></li>";   
+ echo "<li><a href='$controlPanelLink'>  لوحة التحكم</a></li>";
 
 } else {
 $link = "LOGIN1.Php"; // Link goes here!
