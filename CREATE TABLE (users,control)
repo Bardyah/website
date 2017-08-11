@@ -1,0 +1,19 @@
+Database: `loginsystem`
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first` varchar(256) NOT NULL,
+  `user_last` varchar(256) NOT NULL,
+  `user_email` varchar(256) forgin Key,
+  `user_uid` varchar(256) NOT NULL,
+  `user_pwd` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `control` (
+
+  `whatsApp` varchar(256) NOT NULL,
+  `user_last` varchar(256) REFRANCE users (user_last),
+  `telegram` varchar(256) forgin Key,
+  `sms` varchar(256) NOT NULL,
+PRIMARY KEY (user_last),
+) ;

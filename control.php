@@ -1,7 +1,22 @@
-<?php  //Start the Session
-session_start();
-require ('connect.php');
+<?php
+   session_start();
+//require ('connect.php');
+//connect to database
+$db = mysqli_connect("localhost","root","", "loginsystem");
 
+ if (isset($_POST['login']))
+   {
+$session_email =$_SESSION ['user_email']; 
+$whatsApp = $_POST['whatsApp'];
+$telegram = $_POST['telegram'];
+$sms = $_POST['sms'];
+
+     $sql="INSERT INTO control (user_email,whatsApp,telegram,sms)VALUES('$session_email' ,'$whatsApp','$telegram','$sms')";
+      mysqli_query($db,$sql);
+
+   }
+   
+   
 
 ?>
 
@@ -70,17 +85,17 @@ echo "<li><a href='$linka'>التسجيل</a></li>";
     </div>
     
    
-<form method="post" id="myForm" action="index.php" onSubmit="alert('تم التسجيل شكرا');" >
+<form method="post" id="myForm" onSubmit="alert('تم التسجيل شكرا');" >
     <div class="jumbotron text-center header">
-   رقم الجوال لخدمة الواتس اب:<br> <input type="name" name="firstname" value="">
+   رقم الجوال لخدمة الواتس اب:<br> <input type="name" name="whatsApp" value="">
   <br>
  رقم الجوال لخدمة التليقرام:<br>
-  <input type="name" name="lastname" value="">
+  <input type="name" name="telegram" value="">
   <br><br>
    رقم الجوال لخدمة الرسائل القصيره sms :<br>
-  <input type="name" name="lastname" value="">
+  <input type="name" name="sms" value="">
   <br><br>
-<input class="fbbutton" type="submit" name="submit" value="تأكيد الآختيار">
+<input class="fbbutton" type="submit" name="login" value="تأكيد الآختيار">
  
   
 
@@ -89,6 +104,9 @@ echo "<li><a href='$linka'>التسجيل</a></li>";
     </div>
     </form>
     
+    
+
+
       
       <div id="subscribe" class="container-fluid text-center bg-darkbrown coming-soon">
        <div class="row">
