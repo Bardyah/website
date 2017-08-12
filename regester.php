@@ -169,9 +169,9 @@ $dbname = "bardyahdb";
 
 <form method="POST" action="regester.php" class="login-container">
  <td class="form-control" dir="rtl">الاسم</td>
-<td> <input type="email" name="user_first" class="form-control" required></td>
+<td> <input type="text" name="user_first" class="form-control" required></td>
 <tr dir="rtl"> <td>البريد الالكتروني</td>
-<td><input type="text" name="user_email" class="form-control" required></td></tr>
+<td><input type="email" name="user_email" class="form-control" required></td></tr>
 <tr dir="rtl"> <td>كلمة السر</td><td> 
 <input type="password" name="user_pwd"class="form-control" required></td> </tr> 
 <tr dir="rtl"> <td>تاكيد كلمة السر  </td>
