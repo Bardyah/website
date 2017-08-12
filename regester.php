@@ -10,14 +10,15 @@ $dbname = "bardyahdb";
 
    if (isset($_POST['submit']))
    {
-    $user_first = $_POST["user_first"]; 
+    $user_first = $_POST["user_first"];
+    $user_last = $_POST["user_last"];
     $user_email = $_POST["user_email"];
     $user_pwd = $_POST["user_pwd"];
     $password1 = $_POST["pass1"];
 
     if($user_pwd==$password1)
     {
-     $sql="INSERT INTO users (user_first,user_email,user_pwd)VALUES('$user_first','$user_email','$user_pwd')";
+     $sql="INSERT INTO users (user_first,user_last,user_email,user_pwd,registered_at)VALUES('$user_first','$user_last','$user_email','$user_pwd',NOW())";
       mysqli_query($conn,$sql);
      $_SESSION['user_first']=$user_first;
       header("location:index.php");
@@ -131,6 +132,10 @@ $dbname = "bardyahdb";
   cursor: pointer;
 }
 
+.login input[type="reset"] {
+    background: #f7f0db;
+}
+
 .login input[type="submit"]:hover {
   background:  #543e12;
 }
@@ -168,19 +173,21 @@ $dbname = "bardyahdb";
 
 
 <form method="POST" action="regester.php" class="login-container">
- <td class="form-control" dir="rtl">الاسم</td>
+ <td class="form-control" dir="rtl">الاسم الاول</td>
 <td> <input type="text" name="user_first" class="form-control" required></td>
+    <td class="form-control" dir="rtl">اسم العائلة</td>
+    <td> <input type="text" name="user_last" class="form-control" required></td>
 <tr dir="rtl"> <td>البريد الالكتروني</td>
 <td><input type="email" name="user_email" class="form-control" required></td></tr>
 <tr dir="rtl"> <td>كلمة السر</td><td> 
 <input type="password" name="user_pwd"class="form-control" required></td> </tr> 
-<tr dir="rtl"> <td>تاكيد كلمة السر  </td>
+<tr dir="rtl"> <td>تأكيد كلمة السر  </td>
 <td><input class="form-control" type="password" name="pass1" required></td> </tr>
-<td> <input type="checkbox" required ><a  href="banod.php" dir="rtl" required>نعم اوافق على سياسة الخصوصية
-      </a> </td>
+<td> <input type="checkbox" required ><a  href="banod.php" dir="rtl" required>نعم أوافق على سياسة الخصوصية
+      </a> </td> <br>
  <td><input  type="checkbox" required >
     
- <a  href="security.php" dir="rtl">نعم اوافق على بنود الخدمة 
+ <a  href="security.php" dir="rtl">نعم أوافق على بنود الخدمة
 </a></td>
 
     <p><td ><input class="fbbutton" type="submit" name="submit" value="تسجيل"></td></p>

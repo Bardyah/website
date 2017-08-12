@@ -56,6 +56,14 @@
           color: #1e1400;
           font-family: 'Changa';
       }
+
+      .login-header {
+          font-family: 'Changa';
+      }
+
+      form {
+          font-family: 'Changa';
+      }
       
       .features {
           padding: 40px 50px;
