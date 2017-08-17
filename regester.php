@@ -5,30 +5,31 @@
 $username = "adminer";
 $password = "adminer123";
 $dbname = "bardyahdb";
-   $conn = new mysqli($ip_addr, $username, $password, $dbname);
-   
+$conn = new mysqli($ip_addr, $username, $password, $dbname);
+   if (isset($_POST['submit'])) {
+       $user_first = $_POST["user_first"];
+       $user_last = $_POST["user_last"];
+       $user_email = $_POST["user_email"];
+       $user_pwd = $_POST["user_pwd"];
+       $password1 = $_POST["pass1"];
+       if (isset($_POST["user_email"])) {
+           $query = mysqli_query("SELECT * FROM users WHERE user_email='$user_email'");
+           if (mysqli_num_rows($query) > 0) {
+               echo 'email already exists';
+           }
 
-   if (isset($_POST['submit']))
-   {
-    $user_first = $_POST["user_first"];
-    $user_last = $_POST["user_last"];
-    $user_email = $_POST["user_email"];
-    $user_pwd = $_POST["user_pwd"];
-    $password1 = $_POST["pass1"];
-
-    if($user_pwd==$password1)
-    {
-     $sql="INSERT INTO users (user_first,user_last,user_email,user_pwd,registered_at)VALUES('$user_first','$user_last','$user_email','$user_pwd',NOW())";
-      mysqli_query($conn,$sql);
-     $_SESSION['user_first']=$user_first;
-      header("location:index.php");
-    }
-    else
-    {
-       echo "check the password not equal the other ";
-    }
+           else {
+           if ($user_pwd == $password1) {
+               $sql = "INSERT INTO users (user_first,user_last,user_email,user_pwd,registered_at)VALUES('$user_first','$user_last','$user_email','$user_pwd',NOW())";
+               mysqli_query($conn, $sql);
+               $_SESSION['user_first'] = $user_first;
+               header("location:index.php");
+           } else {
+               echo "check the password not equal the other ";
+           }
+       }}
    }
-
+mysqli_close();
 ?>
 
 
