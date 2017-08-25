@@ -29,7 +29,6 @@ $conn = new mysqli($ip_addr, $username, $password, $dbname);
            }
        }}
    }
-mysqli_close();
 ?>
 
 
